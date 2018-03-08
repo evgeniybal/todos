@@ -7,9 +7,9 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 });
 app.get('/zips/:city', (req, res) => {
 
-  zipService.getZipCodesAsync(req.params.city)
+  zipService.getZipCodesAsync2(req.params.city)
     .then(
-      (data)=>{
+      (data)=>{        
         res.send(data);
       },
       (err)=>{
@@ -24,7 +24,7 @@ app.get('/zips/:city', (req, res) => {
 
 app.get('/zips', (req, res) => {
 
-  zipService.getZipCodesAsync()
+  zipService.getZipCodesAsync2()
     .then(
       (data)=>{
         res.send(data);
